@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+/* 全体の背景色と中央揃え */
+body {
+  margin: 0;
+  background-color: #fbe8eb; /* ベビーピンク */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'M PLUS 1', sans-serif;
+}
+
+/* アプリ全体のスタイル */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff; /* 白色の背景 */
+  border-radius: 10px;
+  margin: clamp(0.625rem, 0.435rem + 1.09vw, 1.25rem);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  overflow: hidden;
+}
+
+/* 新しいタスクの入力エリア */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* 下にスペースを追加 */
+}
+
+input[type='text'] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #fbb6c4; /* 明るいピンク */
+  border-radius: 5px;
+  margin-right: 10px; /* ボタンとのスペース */
+  caret-color: #ff3385;
+  font-weight: bold;
+  outline: none;
+}
+input::placeholder {
+  font-family: 'Roboto Slab', serif;
+  opacity: 0.5;
+}
+button {
+  background-color: #ff66b2; /* 明るいピンク */
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* トランジションを追加 */
+}
+
+button:hover {
+  background-color: #ff3385; /* 濃いピンク */
+  transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+/* タスクアイテムのスタイル */
+.todo-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff5f8; /* 薄いベビーピンク */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-checkbox {
+  margin: 1px 10px 0 0;
+  width: 16px; /* 横幅を設定 */
+  height: 16px; /* 高さを設定 */
+  line-height: 16px;
+}
+
+.todo-edit-input {
+  flex-grow: 1;
+  margin: 0 10px;
+  border: 1px solid #fbb6c4; /* 明るいピンク */
+  border-radius: 5px;
+  padding: 5px;
+  caret-color: #ff3385;
+  outline: none;
+}
+
+.todo-text {
+  flex-grow: 1;
+  line-height: 16px;
+}
+
+.todo-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff66b2; /* 明るいピンク */
+  font-size: 16px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* トランジションを追加 */
+}
+
+.todo-button:hover {
+  color: #ff3385; /* 濃いピンク */
+  transform: scale(1.1); /* ホバー時に少し拡大 */
+}
+
+button:hover svg {
+  fill: white; /* ホバー時もアイコンの色を白に設定 */
+}
